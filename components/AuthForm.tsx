@@ -18,7 +18,7 @@ import FormField from "./FormField"
 import { useRouter } from "next/navigation"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
 // import { auth } from "@/firebase/client"
-import { signIn, signup } from "@/lib/actions/auth.action"
+import { signIn, signUp } from "@/lib/actions/auth.action"
 import { auth } from "@/firebase/client"
 
 
@@ -56,7 +56,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
         const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
         // create user record in firestore database using admin sdk
         console.log("User Credentials from Firebase Authentication",userCredentials)
-        const result = await signup({
+        const result = await signUp({
           uid: userCredentials.user.uid,
           name: name!,
           email: email,
