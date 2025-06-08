@@ -80,7 +80,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
                 createdAt: new Date().toISOString()
             });
         return {
-            sucess: true,
+            success: true,
             feedbackId: feedback.id
         }
 
