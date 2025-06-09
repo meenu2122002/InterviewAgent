@@ -46,7 +46,7 @@ const user=await getCurrentUser();
 
             
             <Agent 
-            userName={user?.name}
+            userName={user?.name || " "}
            userId={user?.id}
            interviewId={id}
            type="interview"
