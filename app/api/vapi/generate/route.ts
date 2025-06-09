@@ -45,10 +45,12 @@ export async function POST(request:Request){
         createdAt:new Date().toISOString()
     };
     await db.collection('interviews').add(interview);
+    console.log("interview genrtaed successfully");
     return Response.json({success:true},{status:200});
 
     } catch (error) {
-      console.log(error);
+
+      console.log(error,"error in genrating intwerview");
       return Response.json({success:false,error},{status:500}) ; 
     }
 }
