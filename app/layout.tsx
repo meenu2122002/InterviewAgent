@@ -11,7 +11,7 @@ const monaSans = Mona_Sans({
 
 
 export const metadata: Metadata = {
-  title: "Prepwise",
+  title: "wiseMock",
   description: "AI Agent for interview generation",
 };
 
